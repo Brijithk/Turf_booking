@@ -1,0 +1,48 @@
+.home-mainContainer{
+    height: 100vh;
+    width: 100vw;
+    background:yellow ;
+}
+.home-navBar{
+    height:10%;
+    width:100%;
+    background-color: aqua;
+}
+.home-banner{
+    height:20%;
+    width:100%;
+    background-color: rgb(14, 198, 8);
+}
+.home-contents{
+    display: flex;
+    height: 70%;
+    width:100%;
+    background-color: yellow;
+}
+.home-leftContent{
+    height:100%;
+    width:25%;
+    background-color: rgb(74, 87, 234);
+}
+.home-rightContent{
+    height:calc(100% - 40px);
+    width:75%;
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(auto-fill,118px);
+    gap:30px;
+    margin-right: 120px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+/* .home-rightContent div{
+    width:100%;
+    height: 80%;
+    display: flex;
+} */
+.home{
+    width:40%;
+    height: 100%;
+
+}

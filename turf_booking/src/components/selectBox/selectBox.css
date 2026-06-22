@@ -1,0 +1,37 @@
+/* select{
+    width: 224px;
+    border-radius: 9px;
+    background-color: #878787;
+    height:50px;
+    padding: 13px;
+} */
+/* select{
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+} */
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    width:224px;
+    height: 339px;
+}
+.filter h6{
+    text-align: start;
+    color: black;
+}
+input{
+    width:224px;
+    height:60px;
+    border-radius: 12px;
+    border: none;
+    background-color: #878787;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.select-box{
+    background-color: #878787;
+}
