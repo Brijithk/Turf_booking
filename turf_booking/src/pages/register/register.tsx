@@ -1,25 +1,32 @@
 import { useNavigate } from "react-router-dom"
 import "../register/register.css"
 import registerImage from "../../assets/pana.png"
+import { useState } from "react"
 function register(){
     const navigate = useNavigate()
-    const onSubmit=()=>{
-            navigate("/")
+    const [regData,setRegData]=useState({email:'',password:''})
+    const regData=[]
+    const handleRegister=(e:any)=>{
+        const {name:value}=e.target.value
+        set
+        
+           alert("enter the otp in next page");
+           navigate('/otp')
     }
     return <>
             <div className="register-outer-container">
             <div className="register-inner-container">
                 <div className="register-forms">
                 <h1 >Register</h1>
-                <form action="/register" method="POST" className="register-inner-form">
-                    <input type="text" placeholder="jhon@gmail.com" required></input>
+                <div className="register-inner-form">
+                    <input type="text" name='email' placeholder="jhon@gmail.com" required></input>
                     <a className="register-forgot" href="register_page.html">forgot password?</a>
-                    <button type="submit">Register</button>
+                    <button type="submit" onClick={handleRegister}>Register</button>
                     <div className="register-register-link">
                        Already a member? <a>Login</a>
                     </div>
                     
-                </form>
+                </div>
                 </div>
                 <div className="register-down">
                 <img src={registerImage} className="register-image"></img>

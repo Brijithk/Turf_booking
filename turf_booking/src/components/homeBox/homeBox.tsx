@@ -1,12 +1,14 @@
 import "./homeBox.css"
-
 import courPic from "../../assets/courtpic.png"
 import timeCircle from "../../assets/timeCircle.png"
 type homeProps={
     name:string;
     location:string;
+    timestart:string,
+    timeend:string,
+    slot:number
 }
-function HomeBox({name,location}:homeProps){
+function HomeBox({name,location,timestart,timeend,slot}:homeProps){
     return(
         <div className="home-item-box">
                     <div className="home-box-left">
@@ -17,7 +19,7 @@ function HomeBox({name,location}:homeProps){
                             <h3>{name}</h3>
                             <div className="slot-count">
                                 <div>
-                                    <p>4 Slotes</p>
+                                    <p>{slot} Slotes</p>
                                 </div>
                                 
                             </div>
@@ -32,7 +34,7 @@ function HomeBox({name,location}:homeProps){
                         <div className="home-box-right-last">
                             <div className="home-box-right-last-timeandimage">
                             <img src={timeCircle}></img>
-                            <p>4am to 12am</p>
+                            <p>{timestart} to {timeend}</p>
                             </div>
                             
                             <button>Book</button>

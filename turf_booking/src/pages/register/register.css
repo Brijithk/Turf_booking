@@ -21,9 +21,10 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 15px;
-    width:100%;
+    width:367px;
     border-bottom: 50px;
-    /* box-sizing: border-box;  */
+    height: 45.07px;
+    
    
 }
 .register-inner-form button{
@@ -33,7 +34,8 @@
     cursor: pointer;
     background-color: #689F38;
     color: white;
-    /* box-sizing: border-box;  */
+    width:367px;
+    height: 45.07px;
 }
 
 .register-h1{

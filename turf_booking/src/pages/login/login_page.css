@@ -24,8 +24,9 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 15px;
+    background-color: white;
     width:100%;
-    border-bottom: 50px;
+    /* border-bottom: 50px; */
     /* box-sizing: border-box;  */
    
 }
@@ -102,6 +103,9 @@
     color: #616874;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     
+}
+.error-messages{
+    color: red;
 }
 
 @media (max-width:800px){

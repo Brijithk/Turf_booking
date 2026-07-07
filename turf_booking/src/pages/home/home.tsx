@@ -9,23 +9,23 @@ function Home(){
     const courts=[
         {"name":"court1",
         "location":"sang , singapor",
-        "time-start":"4am",
-        "time-end":"12am",
-        "slot-count":4,
+        "time_start":"4am",
+        "time_end":"12am",
+        "slot_count":4,
         "img-url":""
     },
     {"name":"court2",
         "location":"kazhakuttam ,india",
-        "time-start":"3am",
-        "time-end":"12am",
-        "slot-count":5,
+        "time_start":"3am",
+        "time_end":"12am",
+        "slot_count":5,
         "img-url":""
     },
     {"name":"court3",
         "location":"koluturai ,india",
-        "time-start":"3am",
-        "time-end":"2am",
-        "slot-count":5,
+        "time_start":"3am",
+        "time_end":"2am",
+        "slot_count":5,
         "img-url":""
     }
 
@@ -54,7 +54,7 @@ function Home(){
                     courts.map((home,index)=>(
                             
                             <div key={index}>
-                                <HomeBox name={home.name} location={home.location} />
+                                <HomeBox name={home.name} location={home.location} timestart={home.time_start} timeend={home.time_end}  slot={home.slot_count}/>
                             </div>
                             
                             ))
