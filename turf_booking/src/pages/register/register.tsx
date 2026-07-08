@@ -5,7 +5,7 @@ import { useState } from "react"
 function register(){
     const navigate = useNavigate()
     const [regData,setRegData]=useState({email:'',password:''})
-    const regData=[]
+    // const regData=[]
     const handleRegister=(e:any)=>{
         const {name:value}=e.target.value
         set
