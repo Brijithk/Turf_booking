@@ -8,7 +8,7 @@ function register(){
     // const regData=[]
     const handleRegister=(e:any)=>{
         const {name:value}=e.target.value
-        set
+        set1
         
            alert("enter the otp in next page");
            navigate('/otp')
