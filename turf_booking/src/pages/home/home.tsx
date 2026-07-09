@@ -1,10 +1,10 @@
 import "../home/home.css"
 import HomeBox from "../../components/homeBox/homeBox";
 import HomeHeader from "../../components/homeHeader/homeHeader";
-import ApplyButton from "../../components/applyButton/applyButton";
-import SelectBox from "../../components/selectBox/selectBox";
-import BookCourt from "../../components/bookCourt/bookCourt";
-import TimeSlote from "../../components/timeSlotes/timeSlotes";
+// import ApplyButton from "../../components/applyButton/applyButton";
+// import SelectBox from "../../components/selectBox/selectBox";
+// import BookCourt from "../../components/bookCourt/bookCourt";
+// import TimeSlote from "../../components/timeSlotes/timeSlotes";
 function Home(){
     const courts=[
         {"name":"court1",

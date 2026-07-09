@@ -1,12 +1,12 @@
-import { Placeholder } from "react-select/animated";
+// import { Placeholder } from "react-select/animated";
 import "./selectBox.css"
 import ApplyButton from "../applyButton/applyButton";
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import Select from "react-select";
-import { useState } from "react";
+// import { useState } from "react";
 
 function SelectBox(){
-    const [date,setDate]=useState(null);
+    // const [date,setDate]=useState(null);
     const locationOptions = [
   { value: "Critical", label: "Critical" },
   { value: "Normal", label: "Normal" }

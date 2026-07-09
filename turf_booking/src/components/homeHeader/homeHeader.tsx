@@ -1,4 +1,4 @@
-import homeHead from "../../assets/Group6.png"
+// import homeHead from "../../assets/Group6.png"
 import "./homeHeader.css"
 function HomeHeader(){
     return(

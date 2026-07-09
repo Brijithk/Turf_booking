@@ -30,7 +30,7 @@ function register() {
                     <h1 >Register</h1>
                     <form onSubmit={handleSubmit} className="register-inner-form">
                         <input type="text" name='email' value={regData.email} onChange={handleChange} placeholder="jhon@gmail.com" required></input>
-                        <input type="password" name='password' value={regData.password} onChange={handleChange} placeholder="jhon@gmail.com" required></input>
+                        <input type="password" name='password' value={regData.password} onChange={handleChange} placeholder="Enter the password" required></input>
                         <a className="register-forgot" href="register_page.html">forgot password?</a>
                         <button type="submit">Register</button>
                         <div className="register-register-link">
