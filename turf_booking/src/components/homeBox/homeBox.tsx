@@ -1,6 +1,6 @@
 import "./homeBox.css"
 import courPic from "../../assets/courtpic.png"
-import timeCircle from "../../assets/timeCircle.png"
+import timeCircle from "../../assets/TimeCircle.png"
 type homeProps={
     name:string;
     location:string;
