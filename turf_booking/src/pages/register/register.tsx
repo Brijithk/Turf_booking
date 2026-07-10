@@ -16,12 +16,12 @@ function register() {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setRegData((prev)=>({...prev,[name]:value}))
-
-        alert("enter the otp in next page");
-        navigate('/otp')
     }
+
+
     const handleSubmit=(e:React.SyntheticEvent<HTMLFormElement>)=>{
         e.preventDefault();
+        navigate('/otp')
     }
     return <>
         <div className="register-outer-container">
