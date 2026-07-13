@@ -169,6 +169,24 @@
     font-size: 13px;
 }
 }
+.register-inner-form .register-role-btn{
+    flex:1;
+    width:auto;
+    height:45px;
+    border:2px solid #689F38;
+    border-radius:25px;
+    background:white;
+    color:#689F38;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.register-inner-form .register-role-btn.active{
+    background:#689F38;
+    color:white;
+}
 @media (min-width:800px) and (max-width:1440px){
 .register-forms{
     display: flex;

@@ -1,0 +1,34 @@
+Registration Flow
+--------------------
+1. User enters Email
+        │
+        ▼
+2. Click "Send OTP"
+        │
+        ▼
+3. Backend generates OTP
+        │
+        ▼
+4. OTP sent to Email
+        │
+        ▼
+5. User enters OTP
+        │
+        ▼
+6. Backend verifies OTP
+        │
+        ▼
+7. If OTP is correct
+        │
+        ▼
+8. User fills Name & Password
+        │
+        ▼
+9. Backend creates account
+        │
+        ▼
+10. JWT Token generated
+        │
+        ▼
+11. User logged in
+==========================

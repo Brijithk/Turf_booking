@@ -5,50 +5,64 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 function Login(){
     const [formData,setFormData]=useState({email:"",password:""})
-    const userData=[{
-        email:"brijith@gmail.com",
-        password:"brijith@123"
-    },
-    {
-        email:"shiju@gmail.com",
-        password:"shiju@123"
-    },
-    {
-        email:"abhinav@gmail.com",
-        password:"abhinav@123"
-    }]
+
     const [errors,setErrors]=useState({email:'',password:''})
     const navigate = useNavigate()
     const navigateRegister = () =>{
         navigate('/register')
     }
-    const onSubmit = () => {
-        let newErrors={email:'',password:''}
-        let isValid=true
-        if(!formData.email){
-            newErrors.email="Email is required"
-            isValid=false
-        }
-        if(!formData.password){
-            newErrors.password="Password is required"
-            isValid=false
-        }
-        setErrors(newErrors)
-        if(!isValid){
-            return
-        }
-        const user = userData.find((user)=>
-            user.email===formData.email && 
-            user.password===formData.password
-        )
-        if(user){
-            alert("Login Successfull")
-            navigate("/home")
-        }else{
-            alert("username and password does not match")
-        }
+  const onSubmit = async () => {
+    let newErrors = { email: "", password: "" };
+    let isValid = true;
 
+    if (!formData.email) {
+        newErrors.email = "Email is required";
+        isValid = false;
     }
+
+    if (!formData.password) {
+        newErrors.password = "Password is required";
+        isValid = false;
+    }
+
+    setErrors(newErrors);
+
+    if (!isValid) {
+        return;
+    }
+
+    try {
+        const response = await fetch(
+            "http://localhost:5000/api/auth/login",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: formData.email,
+                    password: formData.password,
+                }),
+            }
+        );
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert(data.message);
+
+            // Optional: save JWT
+            // localStorage.setItem("token", data.token);
+
+            navigate("/home");
+        } else {
+            alert(data.message);
+        }
+    } catch (error) {
+        console.error(error);
+        alert("Server Error");
+    }
+};
     const onchange= (e:any) =>{
         const{name,value} =e.target
         setFormData((prevState)=>({

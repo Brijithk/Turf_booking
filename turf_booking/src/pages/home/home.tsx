@@ -1,10 +1,13 @@
 import "../home/home.css"
 import HomeBox from "../../components/homeBox/homeBox";
 import HomeHeader from "../../components/homeHeader/homeHeader";
+import { Topbar } from "../../components/topbar/Topbar";
+import HomeFilter from "../../components/homeFilter/homeFilter";
 // import ApplyButton from "../../components/applyButton/applyButton";
 // import SelectBox from "../../components/selectBox/selectBox";
 // import BookCourt from "../../components/bookCourt/bookCourt";
 // import TimeSlote from "../../components/timeSlotes/timeSlotes";
+
 function Home(){
     const courts=[
         {"name":"court1",
@@ -40,14 +43,15 @@ function Home(){
     return(
      <div className="home-mainContainer">
         <div className="home-navBar">
-      
+      <Topbar />
         </div>
         <div className="home-banner">
                   <HomeHeader />
         </div>
         <div className="home-contents">
             <div className="home-leftContent">
-                {/* <SelectBox /> */}
+                <HomeFilter />
+                
             </div>
             <div className="home-rightContent">
                 {

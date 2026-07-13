@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from "./pages/login/login";
 import Home from './pages/home/home';
 import Register from "./pages/register/register";
-
+import CompleteRegistration from './pages/CompleteRegistration/completeRegistration';
 import Otp from './pages/otp/otp';
 function App() {
     return (
@@ -14,6 +14,7 @@ function App() {
                     <Route path="/home" element={<Home />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/otp" element={<Otp />} />
+                  <Route path="/completeRegistration" element={<CompleteRegistration />} />
                 </Routes>
             </BrowserRouter>
         </>
