@@ -16,7 +16,9 @@ const authRoutes = require("./routes/authRoutes");
 
 // Register routes
 app.use("/api/auth", authRoutes);
+const courtRoutes = require("./routes/courtRoutes");
 
+app.use("/api/courts", courtRoutes);
 app.get("/", (req, res) => {
     res.send("Backend Running");
 });

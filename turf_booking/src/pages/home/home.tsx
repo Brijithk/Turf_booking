@@ -3,36 +3,37 @@ import HomeBox from "../../components/homeBox/homeBox";
 import HomeHeader from "../../components/homeHeader/homeHeader";
 import { Topbar } from "../../components/topbar/Topbar";
 import HomeFilter from "../../components/homeFilter/homeFilter";
+import { useEffect, useState } from "react";
 // import ApplyButton from "../../components/applyButton/applyButton";
 // import SelectBox from "../../components/selectBox/selectBox";
 // import BookCourt from "../../components/bookCourt/bookCourt";
 // import TimeSlote from "../../components/timeSlotes/timeSlotes";
-
+interface Court {
+    _id: string;
+    name: string;
+    location: string;
+    time_start: string;
+    time_end: string;
+    slot_count: number;
+    image_url: string;
+}
 function Home(){
-    const courts=[
-        {"name":"court1",
-        "location":"sang , singapor",
-        "time_start":"4am",
-        "time_end":"12am",
-        "slot_count":4,
-        "img-url":""
-    },
-    {"name":"court2",
-        "location":"kazhakuttam ,india",
-        "time_start":"3am",
-        "time_end":"12am",
-        "slot_count":5,
-        "img-url":""
-    },
-    {"name":"court3",
-        "location":"koluturai ,india",
-        "time_start":"3am",
-        "time_end":"2am",
-        "slot_count":5,
-        "img-url":""
-    }
+    const [courts, setCourts] = useState<Court[]>([]);
+  useEffect(() => {
+    fetchCourts();
+}, []);
 
-]
+const fetchCourts = async () => {
+    try {
+        const response = await fetch("http://localhost:5000/api/courts");
+
+        const data = await response.json();
+
+        setCourts(data);
+    } catch (error) {
+        console.error(error);
+    }
+};
    
 
     // courts.forEach=>(index){
@@ -53,19 +54,20 @@ function Home(){
                 <HomeFilter />
                 
             </div>
-            <div className="home-rightContent">
-                {
-                    courts.map((home,index)=>(
-                            
-                            <div key={index}>
-                                <HomeBox name={home.name} location={home.location} timestart={home.time_start} timeend={home.time_end}  slot={home.slot_count}/>
-                            </div>
-                            
-                            ))
-                }
-                
-                  
-            </div>
+         <div className="home-rightContent">
+    {courts.map((court) => (
+        <div key={court._id}>
+            <HomeBox
+                name={court.name}
+                location={court.location}
+                timestart={court.time_start}
+                timeend={court.time_end}
+                slot={court.slot_count}
+                image={court.image_url}
+            />
+        </div>
+    ))}
+</div>
         </div>
      </div>
     )

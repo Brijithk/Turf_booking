@@ -32,3 +32,13 @@ Registration Flow
         ▼
 11. User logged in
 ==========================
+
+If you don't want to use geospatial queries initially, you can:
+
+Fetch all courts.
+Get the user's latitude and longitude.
+Calculate the distance in React (or Node.js) using the Haversine formula.
+Sort courts by distance.
+
+==================================
+
